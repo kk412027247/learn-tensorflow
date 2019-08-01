@@ -1,0 +1,2 @@
+windows boot
+.\venv\Scripts\activate
