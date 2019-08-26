@@ -43,7 +43,7 @@ plt.show()
 print('Testing ------------')
 lost = model.evaluate(X_test, Y_test, batch_size=40, verbose=0)
 
-print('test cost:', lost)
+print('test lost:', lost)
 W, b = model.layers[0].get_weights()
 print('Weights=', W, '\nbiases=', b)
 
