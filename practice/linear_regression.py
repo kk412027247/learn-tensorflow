@@ -24,12 +24,20 @@ model = tf.keras.Sequential([
 # 选定loss函数和优化器
 # model.compile(loss='mse', optimizer='sgd')
 
+
+# Adam (short for Adaptive Moment Estimation)
 model.compile(loss='mean_squared_error',
-              optimizer=tf.keras.optimizers.Adam(0.1))
+              optimizer=tf.keras.optimizers.Adam(0.01))
 
 # 训练过程
 print('Training -----------')
-history = model.fit(X_train, Y_train, epochs=500, verbose=1)
+history = model.fit(X_train, Y_train, epochs=100, verbose=1)
+
+# 画出损失函数的图
+plt.xlabel("Epoch Number")
+plt.ylabel("Loss Magnidute")
+plt.plot(history.history['loss'])
+plt.show()
 
 # 测试过程
 print('Testing ------------')
