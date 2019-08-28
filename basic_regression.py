@@ -99,16 +99,6 @@ def plot_history(history):
 
     plt.figure()
     plt.xlabel('Epoch')
-    plt.ylabel('Mean Abs Error [MPG')
-    plt.plot(hist['epoch'], hist['mae'], label='Train Error')
-
-
-def plot_history(history):
-    hist = pd.DataFrame(history.history)
-    hist['epoch'] = history.epoch
-
-    plt.figure()
-    plt.xlabel('Epoch')
     plt.ylabel('Mean Abs Error [MPG]')
     plt.plot(hist['epoch'], hist['mae'],
              label='Train Error')
